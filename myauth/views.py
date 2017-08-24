@@ -54,9 +54,9 @@ def mylogin_validate(request):
         login(request, user)
 
         try:
-            return HttpResponseRedirect(request.GET['next'], data) 
+            return HttpResponseRedirect(request.GET['next'])
         except:
-            return HttpResponseRedirect('/', data)
+            return HttpResponseRedirect('/')
     else:
         return render(request, 'myauth/login.html', {
             'redirect_url': request.GET['next'],
