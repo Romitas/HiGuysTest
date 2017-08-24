@@ -1,0 +1,24 @@
+<h1>Register</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'myauth:register_submit' %}?next={{redirect_url}}" method="post">
+    {% csrf_token %}
+    Email: <br>
+    <input type="textbox" name="email" id="email" value="" /> <br>
+    Password: <br>
+    <input type="password" name="password" id="password" value="" /> <br>
+    Confirm password: <br>
+    <input type="password" name="password_confirmation" id="password_confirmation" value="" /> <br>
+
+    Type: <br>
+    <select name="type" size=1>
+    {% for type in types %}
+        <option id="type{{ forloop.counter }}" value="{{ type.name }}"> {{ type.name }} </option>
+    {% endfor %}
+    </select>
+
+    <br>
+    <br>
+    <input type="submit" value="Submit" /> <br>
+</form>

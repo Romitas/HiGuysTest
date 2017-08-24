@@ -1,0 +1,18 @@
+<head>
+<title> Welcome </title>
+</head>
+
+<h1> Welcome, {{ user }}! </h1>
+<p><a href="{% url 'secret' %}">Secret page (requires login) </a></p>
+
+<p><a href="{% url 'myauth:register' %}">Register</a>
+<br><a href="{% url 'myauth:login' %}">Log in </a>
+<br><a href="{% url 'myauth:logout' %}">Log out </a>
+</p>
+
+<!--TODO: fix these
+<p><a href="/admin/">Admin </a>
+<br><a href="/account/api/users/">REST API</a-->
+<p><a href="{% url 'admin' %}">Admin </a>
+<br><a href="{% url 'myauth:api' %}">Users API</a-->
+</p>

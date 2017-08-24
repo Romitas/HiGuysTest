@@ -1,0 +1,13 @@
+<h1>Log in</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'myauth:login_validate' %}?next={{redirect_url}}" method="post">
+    {% csrf_token %}
+    Email (or nickname): <br>
+    <input type="textbox" name="email" id="email" value="" /> <br>
+    Password: <br>
+    <input type="password" name="password" id="password" value="" /> <br>
+    <br>
+    <input type="submit" value="Submit" /> <br>
+</form>
