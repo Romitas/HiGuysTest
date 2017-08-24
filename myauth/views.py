@@ -10,7 +10,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import MyUser, UserType
+from .models import MyUser, UserType, MyAuthToken
 
 def index(request):
     """Index page, redirect to API view"""
