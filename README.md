@@ -18,6 +18,7 @@
 
 - Creating a new user automatically creates a unique API token for him
 - New UserTypes can be added ONLY with admin panel
+- UserTypes do NOTHING, they're basically just words (so UserType 'admin' doesn't mean actual 'admin' status)
 - Users can be created, modified or deleted using the API (with POST, PUT and DELETE requests accordingly)
 - You may also view, add and edit Users and UserTypes with administration tools
 
