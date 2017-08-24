@@ -11,7 +11,7 @@
 
 1. Open the app: https://higuys-auth.herokuapp.com
 2. Log in (admin:adminpassword) to view API in browser
-3. Get the authorization token: https://higuys-auth.herokuapp.com/account/token, POST {'username':'admin', 'password':'adminpassword'}
+3. Get the authorization token: https://higuys-auth.herokuapp.com/account/token, POST {'email':'admin@admin.net', 'password':'adminpassword'}
 4. Include header {'Authorization':'Token yourauthorizationtokenhere'} in the requests to gain access to Users REST API (CRUD)
 
 ## Hints
